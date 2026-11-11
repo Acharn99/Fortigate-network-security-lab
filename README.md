@@ -1,28 +1,26 @@
-# Fortigate-network-security-lab
-FortiGate firewall configuration and network security lab built with EVE-NG.
-
 # FortiGate Network Security Lab
 
-A hands-on network security lab built with **FortiGate 7.2.4, Cisco IOSvL2 and EVE-NG**.
+A hands-on network security lab built using **FortiGate 7.2.4, Cisco IOSvL2 and EVE-NG**.
 
-## Project Overview
+## 1. Project Overview
 
 This project demonstrates the deployment and configuration of a FortiGate firewall in a virtual enterprise network environment.
 
-The lab covers WAN/LAN connectivity, DHCP, DNS, outbound NAT, firewall policies and traffic logging.
+The lab covers firewall policies, outbound NAT, DHCP, DNS, WAN/LAN connectivity and traffic logging.
 
-## Lab Topology
+## 2. Lab Topology
+
+![EVE-NG Lab Topology](01-topology.png)
 
 **Components:**
 - FortiGate 7.2.4 Firewall
 - Cisco IOSvL2 Virtual Switch
-- Three VPCS endpoints:
-  - PC-HR
-  - PC-IT
-  - DMZ-Zone
-- EVE-NG virtualization platform
+- PC-HR
+- PC-IT
+- DMZ-Zone
+- EVE-NG
 
-## IP Addressing
+## 3. IP Addressing
 
 | Component | Configuration |
 |---|---|
@@ -31,45 +29,51 @@ The lab covers WAN/LAN connectivity, DHCP, DNS, outbound NAT, firewall policies 
 | DHCP Pool | 192.168.10.100–192.168.10.200 |
 | LAN Interface | FortiGate port2 |
 
-## Implemented Features
+## 4. Implemented Features
 
-- FortiGate WAN and LAN interface configuration
-- DHCP server configuration
-- DNS resolution
-- Outbound NAT configuration
+- FortiGate WAN/LAN interface configuration
+- DHCP server and DNS configuration
+- Outbound NAT
 - LAN-to-WAN firewall policy
 - Cisco IOSvL2 switch port configuration
 - Firewall traffic logging
-- End-to-end connectivity testing
+- Network connectivity testing
 
-## Verification and Testing
+## 5. Configuration Evidence
 
-The following tests were performed successfully:
+### FortiGate Firewall Policy
 
-- DHCP address assignment to VPCS clients
-- LAN gateway connectivity using ICMP
-- Internet connectivity using `ping 8.8.8.8`
-- DNS resolution using `ping google.com`
-- LAN-to-WAN traffic through FortiGate
+![Firewall Policy](02-fortigate-policy.png)
 
-## Network Design Note
+### DHCP Configuration and Address Assignment
+
+![DHCP Test](03-dhcp-test.png)
+
+### Internet Connectivity Test
+
+![Internet Connectivity](04-internet-test.png)
+
+### Cisco Switch VLAN Configuration
+
+![Switch VLAN](05-switch-vlan.png)
+
+## 6. Verification Results
+
+- DHCP address assignment: Successful
+- Default gateway connectivity: Successful
+- Internet connectivity to 8.8.8.8: Successful
+- DNS resolution for google.com: Successful
+
+## 7. Network Design Note
 
 All three endpoints currently operate in the same LAN subnet and VLAN 10. Separate HR, IT and DMZ security zones and inter-VLAN isolation are not implemented in this version.
 
-## Technologies
+## 8. Technologies
 
-- FortiGate 7.2.4
-- EVE-NG
-- Cisco IOSvL2
-- VPCS
-- DHCP
-- DNS
-- NAT
-- Firewall Policies
-- ICMP
+FortiGate 7.2.4 | EVE-NG | Cisco IOSvL2 | VPCS | DHCP | DNS | NAT | Firewall Policies | ICMP
 
 ## Author
 
-Burak Kılıç
+**Burak Kılıç**
 
 Network & Security Engineering Portfolio Project
