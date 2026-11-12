@@ -59,7 +59,7 @@ The lab covers firewall policies, outbound NAT, DHCP, DNS, WAN/LAN connectivity,
 
 ### 5.5 FortiGate Network Interfaces – GUI
 
-![FortiGate Network Interfaces](06-network-interfaces.png)
+![FortiGate Network Interfaces](06-network-interfaces-gui.png)
 
 ### 5.6 FortiGate Firewall Policy – GUI
 
